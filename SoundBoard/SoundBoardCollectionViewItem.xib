@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="11201" systemVersion="16C67" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
+    <dependencies>
+        <deployment identifier="macosx"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="11201"/>
+    </dependencies>
+    <objects>
+        <customObject id="-2" userLabel="File's Owner" customClass="SoundBoardCollectionViewItem" customModule="SoundBoard" customModuleProvider="target">
+            <connections>
+                <outlet property="soundBoardCollectionViewItemControllerView" destination="Hz6-mo-xeY" id="zkc-LA-cYj"/>
+                <outlet property="view" destination="Hz6-mo-xeY" id="0bl-1N-x8E"/>
+            </connections>
+        </customObject>
+        <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
+        <customObject id="-3" userLabel="Application" customClass="NSObject"/>
+        <customView id="Hz6-mo-xeY" customClass="SoundBoardCollectionViewItemControllerView" customModule="SoundBoard" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="140" height="120"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+            <subviews>
+                <customView fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="k0x-YM-4wf" userLabel="Control View">
+                    <rect key="frame" x="0.0" y="0.0" width="140" height="120"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                    <subviews>
+                        <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ng0-BX-x6c">
+                            <rect key="frame" x="7" y="97" width="104" height="17"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                            <textFieldCell key="cell" lineBreakMode="truncatingTail" sendsActionOnEndEditing="YES" alignment="left" title="No Sound" id="pHa-h3-UXx">
+                                <font key="font" metaFont="system"/>
+                                <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                            </textFieldCell>
+                        </textField>
+                        <slider horizontalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="p4Z-ga-Yeg">
+                            <rect key="frame" x="109" y="5" width="24" height="111"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                            <sliderCell key="cell" alignment="left" maxValue="1" doubleValue="1" tickMarkPosition="left" numberOfTickMarks="8" sliderType="linear" id="BI3-hH-QkO"/>
+                            <connections>
+                                <action selector="soundBoardKeyVolumeSliderSlide:" target="Hz6-mo-xeY" id="U56-Hj-jRr"/>
+                            </connections>
+                        </slider>
+                        <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="q1F-pO-hvS">
+                            <rect key="frame" x="7" y="45" width="58" height="29"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                            <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" id="cZl-tP-u0x">
+                                <font key="font" metaFont="system" size="24"/>
+                                <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                            </textFieldCell>
+                        </textField>
+                        <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="L10-FH-UwM">
+                            <rect key="frame" x="71" y="39" width="38" height="42"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                            <buttonCell key="cell" type="smallSquare" bezelStyle="smallSquare" image="play_button_icon" imagePosition="only" alignment="center" lineBreakMode="truncatingTail" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="4kg-qG-amZ">
+                                <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                <font key="font" metaFont="system"/>
+                            </buttonCell>
+                            <connections>
+                                <action selector="soundBoardKeyPlayButtonClick:" target="Hz6-mo-xeY" id="c3j-lF-TKa"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                </customView>
+                <customView fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="3Eq-q5-fLY" userLabel="Drop View" customClass="SoundBoardCollectionViewItemDropView" customModule="SoundBoard" customModuleProvider="target">
+                    <rect key="frame" x="0.0" y="0.0" width="140" height="120"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                    <subviews>
+                        <customView fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="jX5-CX-Fzv" customClass="SoundBoardCollectionViewItemDropViewBordedView" customModule="SoundBoard" customModuleProvider="target">
+                            <rect key="frame" x="20" y="10" width="100" height="100"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                            <subviews>
+                                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="kcv-AQ-wvW">
+                                    <rect key="frame" x="-2" y="31" width="104" height="38"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                    <textFieldCell key="cell" sendsActionOnEndEditing="YES" alignment="center" title="Drop It Like It's Hot!" id="f3d-o9-Fld">
+                                        <font key="font" metaFont="system" size="15"/>
+                                        <color key="textColor" name="disabledControlTextColor" catalog="System" colorSpace="catalog"/>
+                                        <color key="backgroundColor" red="1" green="1" blue="0.84943664965986398" alpha="0.0" colorSpace="calibratedRGB"/>
+                                    </textFieldCell>
+                                </textField>
+                            </subviews>
+                        </customView>
+                    </subviews>
+                </customView>
+            </subviews>
+            <connections>
+                <outlet property="soundBoardCollectionViewItemDropView" destination="3Eq-q5-fLY" id="1a7-tn-Dwd"/>
+                <outlet property="soundBoardKeyKeyLabel" destination="q1F-pO-hvS" id="cNl-q9-B1h"/>
+                <outlet property="soundBoardKeyNameLabel" destination="ng0-BX-x6c" id="ajT-Ay-09m"/>
+                <outlet property="soundBoardKeyVolumeSlider" destination="p4Z-ga-Yeg" id="z8E-Ua-nWj"/>
+            </connections>
+            <point key="canvasLocation" x="-72" y="95"/>
+        </customView>
+        <collectionViewItem id="huL-Fn-xwD" customClass="SoundBoardCollectionViewItem" customModule="SoundBoard" customModuleProvider="target"/>
+    </objects>
+    <resources>
+        <image name="play_button_icon" width="32" height="32"/>
+    </resources>
+</document>
